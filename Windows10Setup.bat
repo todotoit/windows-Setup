@@ -40,4 +40,6 @@ echo [Enable Wake On Lan port on Windows Firewall]
 netsh advfirewall firewall add rule name="TLI_Wake-on-LAN" dir=in action=allow profile=any localport=9 protocol=TCP edge=yes
 netsh advfirewall firewall add rule name="TLI_Wake-on-LAN" dir=in action=allow profile=any localport=9 protocol=UDP edge=yes
 echo All operations completed! Press enter to close this window...
+echo [Make computer reachable by Ping]
+netsh advfirewall firewall set rule name="Condivisione file e stampanti (richiesta echo - ICMPv4-In)" dir=in new enable=Yes
 pause
